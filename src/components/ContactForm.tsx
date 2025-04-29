@@ -83,7 +83,7 @@ const ContactForm = () => {
                   <Input
                     placeholder="Your name"
                     {...field}
-                    className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition duration-200 text-gray-800"
                   />
                 </FormControl>
                 <FormMessage />
@@ -104,7 +104,7 @@ const ContactForm = () => {
                     placeholder="your.email@example.com"
                     type="email"
                     {...field}
-                    className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition duration-200 text-gray-800"
                   />
                 </FormControl>
                 <FormMessage />
@@ -125,7 +125,7 @@ const ContactForm = () => {
                 <Input
                   placeholder="What's this about?"
                   {...field}
-                  className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition duration-200"
+                  className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition duration-200 text-gray-800"
                 />
               </FormControl>
               <FormMessage />
@@ -146,7 +146,7 @@ const ContactForm = () => {
                   placeholder="Tell me about your project or inquiry..."
                   rows={4}
                   {...field}
-                  className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition duration-200"
+                  className="w-full px-4 py-3 border border-gray-300 bg-white rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition duration-200 text-gray-800"
                 />
               </FormControl>
               <FormMessage />

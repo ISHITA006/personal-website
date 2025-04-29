@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import emailjs from 'emailjs-com';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -19,24 +20,20 @@ export const sendContactForm = async (data: {
   message: string;
 }) => {
   try {
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    const result = await emailjs.send(
+      'service_65jgi6r',    
+      'template_arj2s8k',
+      {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject || 'No Subject',
+        message: data.message,
       },
-      body: JSON.stringify(data),
-    });
-    
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.message || 'Failed to send message');
-    }
-    
-    return await response.json();
+      'LBjA3Z9HrPRD9IZbc' // EmailJS public key
+    );
+
+    return result;
   } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(error.message);
-    }
-    throw new Error('An unknown error occurred');
+    throw new Error('Failed to send email: ' + error);
   }
 };
