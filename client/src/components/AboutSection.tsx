@@ -13,7 +13,7 @@ const AboutSection = () => {
           <div className="md:w-2/5">
             <div className="rounded-2xl shadow-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                src="/images/ishita_solo.jpeg"
                 alt="Modern tech workspace"
                 className="w-full h-auto object-cover"
               />

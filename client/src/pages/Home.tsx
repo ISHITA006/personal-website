@@ -21,7 +21,7 @@ const Home = () => {
 
   // Set page title
   useEffect(() => {
-    document.title = "John Doe - AI & Automation Specialist";
+    document.title = "Ishita Saraf - AI & Automation Specialist";
   }, []);
 
   return (

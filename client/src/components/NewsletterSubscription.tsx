@@ -43,7 +43,7 @@ const NewsletterSubscription = () => {
   const onSubmit = async (data: NewsletterValues) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/newsletter/subscribe", {
+      const response = await fetch("https://hook.eu2.make.com/wnpeq4nky6cobcdglfout44labefdds8", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,18 +51,16 @@ const NewsletterSubscription = () => {
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
-
       if (response.ok) {
         toast({
           title: "Successfully subscribed!",
           description:
-            "Thank you for subscribing to our newsletter. You'll receive updates on AI and automation insights.",
+            "Thank you for subscribing to our newsletter. You'll receive daily updates on AI and automation insights.",
           variant: "default",
         });
         form.reset();
       } else {
-        throw new Error(result.message || "Failed to subscribe to newsletter");
+        throw new Error("Failed to subscribe to newsletter");
       }
     } catch (error) {
       toast({
@@ -107,7 +105,7 @@ const NewsletterSubscription = () => {
                     <Input
                       placeholder="John"
                       {...field}
-                      className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition duration-200"
+                      className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition duration-200 text-gray-800"
                     />
                   </FormControl>
                   <FormMessage />
@@ -127,7 +125,7 @@ const NewsletterSubscription = () => {
                     <Input
                       placeholder="Smith"
                       {...field}
-                      className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition duration-200"
+                      className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition duration-200 text-gray-800"
                     />
                   </FormControl>
                   <FormMessage />
@@ -149,7 +147,7 @@ const NewsletterSubscription = () => {
                     placeholder="your.email@example.com"
                     type="email"
                     {...field}
-                    className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition duration-200"
+                    className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition duration-200 text-gray-800"
                   />
                 </FormControl>
                 <FormMessage />
