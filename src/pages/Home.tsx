@@ -7,6 +7,8 @@ import WorkSection from "@/components/WorkSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
+import PastProjectsSection from "@/components/PastProjectsSection";
+import ExperienceSection from "@/components/ExperienceSection";
 
 const Home = () => {
   // Initialize component animations
@@ -48,6 +50,24 @@ const Home = () => {
         variants={fadeIn}
       >
         <WorkSection />
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={fadeIn}
+      >
+        <ExperienceSection />
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={fadeIn}
+      >
+        <PastProjectsSection />
       </motion.div>
 
       <motion.div

@@ -30,7 +30,7 @@ const AboutSection = () => {
                 secure systems.
               </p>
               <p>
-                After graduation, I worked as a full stack software developer in
+                I have experience as a full stack software developer in
                 a fast-paced startup environment, delivering end-to-end web and
                 backend solutions with real impact.
               </p>
